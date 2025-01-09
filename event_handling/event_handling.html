@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Handling </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            ;
+        }
+
+        #message {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+        #clickButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #hoverArea {
+            width: 200px;
+            height: 200px;
+            margin-top: 20px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 200px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #inputField {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1> JavaScript Event Handling </h1><hr>
+
+    <button id="clickButton">Click Me!</button>
+
+    <div id="hoverArea">Hover Over Me!</div>
+
+    <input type="text" id="inputField" placeholder="Type something..." />
+    <button style="padding: 10px;" id="colorButton">Change Background Color</button>
+
+
+    <div id="message"></div>
+
+    <script>
+        document.getElementById('clickButton').addEventListener('click', function() {
+            document.getElementById('message').innerText = 'HELLO WELCOME....';
+            document.getElementById('message').style.backgroundColor = '#e0ffe0';
+        });
+
+        document.getElementById('hoverArea').addEventListener('mouseover', function() {
+            this.style.backgroundColor = 'lightcoral';
+            this.innerText = 'You\'re Hovering!';
+        });
+
+        document.getElementById('hoverArea').addEventListener('mouseout', function() {
+            this.style.backgroundColor = 'lightblue';
+            this.innerText = 'Hover Over Me!';
+        });
+
+        document.getElementById('inputField').addEventListener('keydown', function(event) {
+            document.getElementById('message').innerText = 'You pressed: ' + event.key;
+            document.getElementById('message').style.backgroundColor = '#ffffcc';
+        });
+        // Get the button element
+const button = document.getElementById('colorButton');
+
+button.addEventListener('click', function() {
+    const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+    
+    document.body.style.backgroundColor = randomColor;
+});
+
+    </script>
+
+</body>
+</html>
