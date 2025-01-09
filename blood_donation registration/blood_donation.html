@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="blood.css">
+</head>
+<body>
+    <h1 style="text-align: center;margin-top: 10px;">Blood Donation Campaign</h2><hr>
+
+<div class="container">
+    <div class="container">
+        <div class="left">
+            <h2 style="margin-right: 90px;margin-top: -40px;">Who will you save today?</h2>
+            <h2 style="margin-right: 90px;margin-top: -20px;color: beige;">"Donate Blood"</h2>
+
+            <img class="img"  width="120%" height="70%"   src="./images/blood-donation-camp-poster-design-template-5e9a8529530b5aa874b768a44ef15291_screen.jpg" alt="">
+        </div>
+        <div class="right">
+           <form  id="myForm"  action="#" method="post">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" required>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required>
+
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="gender">Gender:</label>
+        <div id="radio">
+        <input type="radio"id="male"value="male"name="gender">
+        <label for="male">Male</label>
+        <input type="radio"id="Female"value="Female"name="gender">
+        <label for="Female">Female</label>
+        <input type="radio"id="others"value="others"name="gender">
+        <label for="others">Others</label>
+    </div>
+    <br>
+        <label for="blood-group">Select Your Blood Group:</label>
+        <select id="blood-group" name="blood-group">
+            <option value="">--Please choose an option--</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+        </select>
+        <label for="number">Mobile Number</label>
+        <input type="number" id="number" name="number" required>
+        <div class="w1">
+        <input style="background-color:red ;" type="submit" value="Submit">
+    </div>
+    </form> 
+
+        </div>
+    </div>
+</body>
+  <script>
+        const form = document.getElementById('myForm');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Form submitted successfully!'); 
+
+        
+            form.reset(); 
+        });
+    </script>
+</html>
