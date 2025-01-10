@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Online Examination System</title> 
+<style> 
+body { 
+font-family: Arial, sans-serif; 
+} 
+.question { 
+margin-bottom: 20px; 
+} 
+.option { 
+margin-bottom: 10px; 
+} 
+.submit-btn { 
+background-color: #4CAF50; 
+color: #fff; 
+padding: 10px 20px; 
+border: none; 
+border-radius: 5px; 
+cursor: pointer; 
+} 
+.submit-btn:hover { 
+background-color: #3e8e41; 
+} 
+</style> 
+</head> 
+<body> 
+<h1>Online Examination System</h1> 
+<form id="exam-form"> 
+<div class="question"> 
+<h2>Question 1: What is the capital of France?</h2> 
+<div class="option"> 
+<input type="radio" id="q1-opt1" name="q1" value="Paris"> 
+<label for="q1-opt1">Paris</label> 
+</div> 
+<div class="option"> 
+<input type="radio" id="q1-opt2" name="q1" value="London"> 
+<label for="q1-opt2">London</label> 
+</div> 
+<div class="option"> 
+<input type="radio" id="q1-opt3" name="q1" value="Berlin"> 
+<label for="q1-opt3">Berlin</label> 
+</div> 
+</div> 
+<div class="question"> 
+<h2>Question 2: Which planet is the largest in our solar system?</h2> 
+<div class="option"> 
+<input type="radio" id="q2-opt1" name="q2" value="Earth"> 
+<label for="q2-opt1">Earth</label> 
+</div> 
+<div class="option"> 
+<input type="radio" id="q2-opt2" name="q2" value="Saturn"> 
+<label for="q2-opt2">Saturn</label> 
+</div> 
+<div class="option"> 
+<input type="radio" id="q2-opt3" name="q2" value="Jupiter"> 
+<label for="q2-opt3">Jupiter</label> 
+</div> 
+</div> 
+<button class="submit-btn" type="submit">Submit</button> 
+</form> 
+<script> 
+const examForm = document.getElementById("exam-form"); 
+examForm.addEventListener("submit", function(event) { 
+event.preventDefault(); 
+const q1Answer = document.querySelector('input[name="q1"]:checked').value; 
+const q2Answer = document.querySelector('input[name="q2"]:checked').value; 
+let score = 0; 
+if (q1Answer === "Paris") { 
+score++; 
+} 
+if (q2Answer === "Jupiter") { 
+score++; 
+} 
+alert(`Your score is ${score} out of 2`); 
+}); 
+</script> 
+</body> 
+</html>

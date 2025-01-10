@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Color Changing Techniques</title> 
+    <style> 
+        .color-box { 
+            width: 200px; 
+            height: 200px; 
+            background-color: #ff0000; /* initial color */ 
+            margin: 20px; 
+            display: inline-block; 
+        } 
+         
+        #box1 { 
+            transition: background-color 0.5s ease; 
+        } 
+         
+        #box2 { 
+            transition: background-color 0.5s ease; 
+        } 
+         
+        #box3 { 
+            transition: background-color 0.5s ease; 
+        } 
+        h4, h1 
+        { 
+            color: rgb(65, 2, 2); 
+        } 
+    </style> 
+</head> 
+<body> 
+    <h1 style="text-align: center;">Color Changing Techniques</h1> 
+    <div style="display: flex; justify-content: space-around;"> 
+        <div style="display: flex; flex-direction: column;"> 
+            <!-- Click Event --> 
+            <div class="color-box" id="box1"></div> 
+            <button onclick="changeColor1()" style="margin-top: 15px;">Click to Change Color</button>    
+        </div> 
+        <div style="display: flex; flex-direction: column;"> 
+            <!-- Hover Event --> 
+            <div class="color-box" id="box2" onmouseover="changeColor2()" onmouseout="resetColor2()"></div> 
+            <h4>Hover Mouse to see Color Change</h4> 
+        </div> 
+        <div style="display: flex; flex-direction: column;"> 
+            <!-- Double Click Event --> 
+            <div class="color-box" id="box3" onclick="changeColor3()"></div> 
+            <h4>Click on the box once to Change Color</h4> 
+        </div> 
+        <div style="display: flex; flex-direction: column;"> 
+            <!-- Mouse Move Event --> 
+            <div class="color-box" id="box4" onmousemove="changeColor4(event)"></div> 
+            <h4>Move Mouse Over to Change Colors</h4> 
+        </div>     
+    </div> 
+    <script> 
+        function changeColor1() { 
+            document.getElementById('box1').style.backgroundColor = `#${Math.floor(Math.random() * 
+16777215).toString(16)}`; 
+        } 
+         
+        function changeColor2() { 
+            document.getElementById('box2').style.backgroundColor = 'blue'; 
+        } 
+         
+        function resetColor2() { 
+            document.getElementById('box2').style.backgroundColor = 'red'; 
+        }  
+        function changeColor3() { 
+            document.getElementById('box3').style.backgroundColor = 'green'; 
+        }  
+        function changeColor4(event) { 
+            const x = event.clientX; 
+            const y = event.clientY; 
+            const color = `rgb(${x % 256}, ${y % 256}, ${Math.floor(Math.random() * 256)})`; 
+            document.getElementById('box4').style.backgroundColor = color; 
+        } 
+    </script> 
+</body> 
+</html>

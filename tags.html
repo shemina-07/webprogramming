@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+        }
+        .content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .content ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+        .form-container input, .form-container textarea, .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to My Simple Website</h1>
+        <p>Using Different HTML Tags</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#section1">Introduction</a>
+        <a href="#section2">Image</a>
+        <a href="#section3">List</a>
+        <a href="#section4">Table</a>
+        <a href="#section5">Form</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Section 1: Introduction -->
+        <section id="section1" class="content">
+            <h2>1. Introduction</h2>
+            <p>Welcome to my simple website! This site demonstrates various HTML tags and how they are used to create a web page.</p>
+            <p>HTML is the foundation of web pages. With tags like <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, and more, you can create structured content.</p>
+        </section>
+
+        <!-- Section 2: Image -->
+        <section id="section2" class="content">
+            <h2>2. Image Example</h2>
+            <p>Here is an example image included using the <code>&lt;img&gt;</code> tag:</p>
+            <img src="./images/image.jpg" alt="Sample Image">
+        </section>
+
+        <!-- Section 3: List -->
+        <section id="section3" class="content">
+            <h2>3. List Example</h2>
+            <p>HTML supports both ordered and unordered lists. Here are examples:</p>
+
+            <!-- Unordered List -->
+            <h3>Unordered List:</h3>
+            <ul>
+                <li>HTML Basics</li>
+                <li>CSS Styling</li>
+                <li>JavaScript Programming</li>
+            </ul>
+
+            <!-- Ordered List -->
+            <h3>Ordered List:</h3>
+            <ol>
+                <li>Learn HTML</li>
+                <li>Understand CSS</li>
+                <li>Practice JavaScript</li>
+            </ol>
+        </section>
+
+        <!-- Section 4: Table -->
+        <section id="section4" class="content">
+            <h2>4. Table Example</h2>
+            <p>Tables are created with the <code>&lt;table&gt;</code> tag. Here is a simple table:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Apple</td>
+                        <td>$1.00</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Banana</td>
+                        <td>$0.50</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Orange</td>
+                        <td>$0.75</td>
+                        <td>8</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section 5: Form -->
+        <section id="section5" class="content">
+            <h2>5. Contact Form</h2>
+            <p>You can use the <code>&lt;form&gt;</code> tag to collect user input. Here's a simple contact form:</p>
+            <div class="form-container">
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Simple Website | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
